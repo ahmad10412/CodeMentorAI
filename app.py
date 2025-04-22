@@ -72,6 +72,7 @@ apply_custom_styles()
 st.markdown("<h1 style='text-align: center;'>🧠 CodeMentorAI</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color:#dfe6e9;'>AI-Powered Feedback for Future Coders</h4>", unsafe_allow_html=True)
 st.markdown("---")
+st.markdown("<p style='text-align: center; color:#f1c40f; font-size: 1.2rem;'>Every great coder once started with <code>Hello, World!</code></p>", unsafe_allow_html=True)
 
 # UI Elements
 language = st.selectbox("Choose Language", ["Python", "JavaScript", "Java"])
