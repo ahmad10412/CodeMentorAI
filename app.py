@@ -10,44 +10,45 @@ def apply_custom_styles():
                 color: white;
                 font-family: 'Segoe UI', sans-serif;
             }
-
+        
             h1 {
                 color: #FFDE59 !important;
                 font-size: 2.8rem;
                 font-weight: 700;
             }
-
+        
             .stSubheader {
                 color: #F8F8F8 !important;
             }
-
-            /* Fix for invisible text in dropdown */
+        
+            /* Dropdown select wrapper */
             div[data-baseweb="select"] {
                 background: linear-gradient(to right, #1e3c72, #2a5298) !important;
-                color: white !important;
                 border-radius: 10px !important;
                 padding: 5px !important;
                 font-weight: 500;
             }
-            
-            div[data-baseweb="select"] * {
-                color: white !important;
-            }
-
-            /* Fix selected dropdown value text (closed state) */
-            div[data-baseweb="select"] > div {
-                background-color: #ffffff !important;
-                color: #000000 !important;
+        
+            /* Fix selected value inside closed dropdown */
+            div[data-baseweb="select"] div[role="button"] {
+                background-color: #1e3c72 !important;
+                color: #ffffff !important;
                 font-weight: 500 !important;
                 border-radius: 10px !important;
+                border: none !important;
             }
-            
-            /* Optionally darken the dropdown options panel too */
+        
+            /* Dropdown items list when expanded */
             div[role="listbox"] {
-                background-color: #f0f0f0 !important;
-                color: #000000 !important;
+                background-color: #1e1e1e !important;
+                color: #ffffff !important;
+                font-weight: 500;
             }
-
+        
+            div[role="listbox"] * {
+                color: #ffffff !important;
+            }
+        
             /* Gradient textarea with visible text + placeholder */
             textarea {
                 background: linear-gradient(to right, #141e30, #243b55) !important;
@@ -57,20 +58,19 @@ def apply_custom_styles():
                 font-size: 1rem !important;
                 border: 1px solid #aaa !important;
             }
-            
+        
             textarea::placeholder {
-                color: #ffdd57 !important; /* Bright yellowish placeholder */
+                color: #ffdd57 !important;
                 opacity: 0.8 !important;
             }
-
-            /* Label visibility fix for selectbox and textarea */
+        
+            /* Label fix */
             label, .stTextArea label, .stSelectbox label {
                 color: #ffffff !important;
                 font-weight: 500;
                 font-size: 1rem;
             }
-
-
+        
             div.stButton > button {
                 background-color: #FF6F61;
                 color: white;
@@ -80,20 +80,20 @@ def apply_custom_styles():
                 padding: 10px 20px;
                 transition: 0.3s;
             }
-
+        
             div.stButton > button:hover {
                 background-color: #E85D54;
             }
-
+        
             .st-expanderHeader {
                 font-weight: 600;
                 color: #FFD700;
             }
-
+        
             .stMarkdown {
                 font-size: 1.1rem;
             }
-
+        
             .stTextInput input {
                 background-color: #ffffff;
                 color: #000000;
