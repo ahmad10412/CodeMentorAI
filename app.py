@@ -47,6 +47,14 @@ def apply_custom_styles():
                 opacity: 0.8 !important;
             }
 
+            /* Label visibility fix for selectbox and textarea */
+            label, .stTextArea label, .stSelectbox label {
+                color: #ffffff !important;
+                font-weight: 500;
+                font-size: 1rem;
+            }
+
+
             div.stButton > button {
                 background-color: #FF6F61;
                 color: white;
