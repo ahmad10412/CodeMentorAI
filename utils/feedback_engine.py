@@ -13,12 +13,13 @@ def get_code_feedback(code_input, language="Python"):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-2024-05-13",  # use exact model version
             messages=[
                 {"role": "system", "content": "You provide friendly and accurate coding feedback."},
                 {"role": "user", "content": prompt}
             ]
         )
+
         return response.choices[0].message.content
     except Exception as e:
         return f"Error: {str(e)}"
