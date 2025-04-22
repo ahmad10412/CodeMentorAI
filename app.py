@@ -21,15 +21,17 @@ def apply_custom_styles():
                 color: #F8F8F8 !important;
             }
 
-            /* Gradient dropdown (selectbox) */
+            /* Fix for invisible text in dropdown */
             div[data-baseweb="select"] {
-                background: linear-gradient(to right, #1e3c72, #2a5298);
-                border-radius: 10px;
-                padding: 5px;
+                background: linear-gradient(to right, #1e3c72, #2a5298) !important;
+                color: white !important;
+                border-radius: 10px !important;
+                padding: 5px !important;
+                font-weight: 500;
             }
-
+            
             div[data-baseweb="select"] * {
-                color: #ffffff !important;
+                color: white !important;
             }
 
             /* Gradient textarea with visible text + placeholder */
