@@ -16,4 +16,5 @@ if st.button('Get Feedback'):
         with st.spinner('Analyzing your code...'):
             feedback = get_code_feedback(code_input, language)
             st.success("Here's your feedback:")
-            st.code(feedback, language='markdown')
+            st.markdown(feedback)
+
