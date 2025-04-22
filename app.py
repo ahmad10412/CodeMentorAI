@@ -21,12 +21,25 @@ def apply_custom_styles():
                 color: #F8F8F8 !important;
             }
 
+            /* Gradient dropdown (selectbox) */
+            div[data-baseweb="select"] {
+                background: linear-gradient(to right, #1e3c72, #2a5298);
+                border-radius: 10px;
+                padding: 5px;
+            }
+
+            div[data-baseweb="select"] * {
+                color: #ffffff !important;
+            }
+
+            /* Gradient textarea */
             textarea {
-                background-color: #f7f7f7 !important;
-                color: #000 !important;
-                border-radius: 8px;
-                padding: 12px;
-                font-size: 1rem;
+                background: linear-gradient(to right, #1c1c1c, #2c3e50) !important;
+                color: #ffffff !important;
+                border-radius: 10px !important;
+                padding: 12px !important;
+                font-size: 1rem !important;
+                border: 1px solid #555 !important;
             }
 
             div.stButton > button {
@@ -56,12 +69,6 @@ def apply_custom_styles():
                 background-color: #ffffff;
                 color: #000000;
             }
-
-            .stSelectbox div[role="button"] {
-                background-color: #ffffff !important;
-                color: #000 !important;
-                border-radius: 5px;
-            }
         </style>
     """, unsafe_allow_html=True)
 
@@ -71,10 +78,10 @@ apply_custom_styles()
 # App header
 st.markdown("<h1 style='text-align: center;'>🧠 CodeMentorAI</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color:#dfe6e9;'>AI-Powered Feedback for Future Coders</h4>", unsafe_allow_html=True)
-st.markdown("---")
 st.markdown("<p style='text-align: center; color:#f1c40f; font-size: 1.2rem;'>Every great coder once started with <code>Hello, World!</code></p>", unsafe_allow_html=True)
+st.markdown("---")
 
-# UI Elements
+# UI Inputs
 language = st.selectbox("Choose Language", ["Python", "JavaScript", "Java"])
 code_input = st.text_area("Paste your code here", height=300)
 
