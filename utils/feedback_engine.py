@@ -13,7 +13,7 @@ def get_code_feedback(code_input, language="Python"):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You provide friendly and accurate coding feedback."},
                 {"role": "user", "content": prompt}
