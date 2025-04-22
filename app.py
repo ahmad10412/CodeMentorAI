@@ -32,14 +32,19 @@ def apply_custom_styles():
                 color: #ffffff !important;
             }
 
-            /* Gradient textarea */
+            /* Gradient textarea with visible text + placeholder */
             textarea {
-                background: linear-gradient(to right, #1c1c1c, #2c3e50) !important;
+                background: linear-gradient(to right, #141e30, #243b55) !important;
                 color: #ffffff !important;
                 border-radius: 10px !important;
                 padding: 12px !important;
                 font-size: 1rem !important;
-                border: 1px solid #555 !important;
+                border: 1px solid #aaa !important;
+            }
+            
+            textarea::placeholder {
+                color: #ffdd57 !important; /* Bright yellowish placeholder */
+                opacity: 0.8 !important;
             }
 
             div.stButton > button {
