@@ -124,7 +124,6 @@ code_input = st_ace(
     wrap=True,
     auto_update=True,
     height=300,
-    line_height=1.8
    
 )
 
