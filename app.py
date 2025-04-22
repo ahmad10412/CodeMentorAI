@@ -127,7 +127,7 @@ code_input = st_ace(
 )
 
 # Secret passphrase input
-with st.expander("🔐 Unlock Feedback"):
+with st.expander("🔐 Unlock Feedback - (Type - Wingardium Leviosa)"):
     user_secret = st.text_input("Enter your access phrase", type="password")
 
 # Feedback button
