@@ -1,7 +1,7 @@
 import streamlit as st
 from utils.feedback_engine import get_code_feedback
 from streamlit_ace import st_ace
-from streamlit_code_editor import code_editor
+
 
 
 # Apply custom styles
@@ -115,16 +115,19 @@ st.markdown("---")
 
 # UI Inputs
 language = st.selectbox("Choose Language", ["Python", "JavaScript", "Java"])
-editor_result = code_editor(
-    code=code_input if 'code_input' in locals() else "",
+code_input = st_ace(
+    placeholder="Paste or write your code here...",
     language=language.lower(),
     theme="monokai",
+    key="ace_editor",
+    font_size=14,
+    tab_size=4,
+    show_gutter=True,
+    wrap=True,
+    auto_update=True,
     height=300,
-    line_height=1.8,  # This actually works
-    focus=True
+   
 )
-
-code_input = editor_result["code"]
 
 
 # Secret passphrase input
