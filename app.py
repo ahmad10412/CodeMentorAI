@@ -34,6 +34,20 @@ def apply_custom_styles():
                 color: white !important;
             }
 
+            /* Fix selected dropdown value text (closed state) */
+            div[data-baseweb="select"] > div {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                font-weight: 500 !important;
+                border-radius: 10px !important;
+            }
+            
+            /* Optionally darken the dropdown options panel too */
+            div[role="listbox"] {
+                background-color: #f0f0f0 !important;
+                color: #000000 !important;
+            }
+
             /* Gradient textarea with visible text + placeholder */
             textarea {
                 background: linear-gradient(to right, #141e30, #243b55) !important;
