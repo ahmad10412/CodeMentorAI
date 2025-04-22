@@ -2,8 +2,6 @@ import streamlit as st
 from utils.feedback_engine import get_code_feedback
 from streamlit_ace import st_ace
 
-
-
 # Apply custom styles
 def apply_custom_styles():
     st.markdown("""
