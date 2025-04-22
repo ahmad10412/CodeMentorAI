@@ -123,7 +123,8 @@ code_input = st_ace(
     show_gutter=True,
     wrap=True,
     auto_update=True,
-    height=300
+    height=300,
+    style={"lineHeight": "1.8"} 
 )
 
 # Secret passphrase input
