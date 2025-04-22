@@ -116,7 +116,7 @@ language = st.selectbox("Choose Language", ["Python", "JavaScript", "Java"])
 code_input = st_ace(
     placeholder="Paste or write your code here...",
     language=language.lower(),
-    theme="twilight",
+    theme="monokai",
     key="ace_editor",
     font_size=14,
     tab_size=4,
@@ -126,6 +126,7 @@ code_input = st_ace(
     height=300,
     style={"lineHeight": "1.8"} 
 )
+
 
 # Secret passphrase input
 with st.expander("🔐 Unlock Feedback - (Type - Wingardium Leviosa)"):
